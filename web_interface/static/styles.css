@@ -1,0 +1,125 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezados */
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+/* Contenedores */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+button {
+    display: inline-block;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #007BFF;
+    color: white;
+}
+
+/* Imágenes */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Botón centrado */
+.center-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Diseño de cuadrícula para los destinos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas de destinos */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Imágenes en las tarjetas del índice */
+.card img {
+    width: 100px; /* Tamaño fijo para que no se desborden */
+    height: 100px;
+    margin: 0 auto; /* Centra la imagen */
+    display: block;
+}
+
+/* Diseño responsivo para el índice */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}

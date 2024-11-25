@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destino</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item['name'] }}</td>
+                        <td>{{ item['quantity'] }}</td>
+                        <td>${{ item['price'] }}</td>
+                        <td>${{ item['subtotal'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p><strong>Total:</strong> ${{ total }}</p>
+        <div class="center-button">
+            <form action="/order" method="post">
+                <button>Generar Orden</button>
+            </form>
+            <a href="/">Volver</a>
+        </div>
+    </div>
+</body>
+</html>

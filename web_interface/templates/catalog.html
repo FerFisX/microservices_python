@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Catálogo de Destinos</h1>
+        <div class="grid">
+            {% for destination in destinations %}
+                <div class="card">
+                    <div class="image-container">
+                        <img src="https://www.ofep.gob.bo/media/k2/items/cache/8fec76403cdb80bae15cf6ab854e1d50_XL.jpg" alt="Imagen del Destino">
+                    </div>
+                    <strong>{{ destination[1] }}</strong>
+                    <p>{{ destination[2] }}</p>
+                    <p><strong>Precio:</strong> ${{ destination[3] }}</p>
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="destination_id" value="{{ destination[0] }}">
+                        <input type="number" name="quantity" value="1" min="1" style="width: 50px; margin-right: 10px;">
+                        <button type="submit">Añadir al Carrito</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="center-button">
+            <a href="/">Volver</a>
+        </div>
+    </div>
+</body>
+</html>
